@@ -1,47 +1,20 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(HomePage());
-}
+void main() => runApp(MyApp());
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Material App',
       home: Scaffold(
-        body: Container(
-          padding: EdgeInsets.all(20),
-          child: Center(
-            child: Column(
-              children: [
-                Container(
-                  width: 200,
-                  child: ElevatedButton(
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.login,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text('Login wit Google')
-                      ],
-                    ),
-                    onPressed: () {
-                      print('alpr');
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
         appBar: AppBar(
-          title: Text('Merhaba'),
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Container(
+            child: Text('Hello World'),
+          ),
         ),
       ),
     );
